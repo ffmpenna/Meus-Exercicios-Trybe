@@ -23,8 +23,8 @@
 
         }
 
-        .list {
-            background-color: orange
+        p, ul {
+            background-color: rgb(236, 192, 111)
         }
 
         #yellow{
