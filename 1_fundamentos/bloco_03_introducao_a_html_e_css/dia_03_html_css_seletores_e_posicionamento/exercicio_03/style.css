@@ -1,0 +1,19 @@
+h1, p{
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    color: currentColor;
+}
+ul{
+    list-style: none;
+}
+
+li:hover{
+    background-color: rgb(71, 212, 101);
+}
+li:active{
+    font-family: Verdana, Geneva, Tahoma, sans-serif ;
+    font-weight: 800;
+}
