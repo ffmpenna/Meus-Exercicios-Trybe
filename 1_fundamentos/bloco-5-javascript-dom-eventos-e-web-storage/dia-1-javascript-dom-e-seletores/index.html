@@ -50,21 +50,45 @@
         - document.getElementsByTagName()*/
 
       // 1. Crie uma função que mude o texto na tag <p>-----</p> para uma descrição de como você se vê daqui a 2 anos. (Não gaste tempo pensando no texto e sim realizando o exercício)
-      document.getElementsByTagName("p")[1].innerText =
-        "Trabalhando, morando sozinho (por favor!!) e indo em direção a felicidade.";
+      function completeFirstParagraph() {
+        document.getElementsByTagName("p")[1].innerText =
+          "Trabalhando, morando sozinho (por favor!!) e indo em direção a felicidade.";
+      }
+      completeFirstParagraph();
 
       // 2. Crie uma função que mude a cor do quadrado amarelo para o verde da Trybe (rgb(76,164,109)).
-      const mainContent = document.getElementsByClassName("main-content")[0];
-      mainContent.style.backgroundColor = "rgb(76,164,109)";
+      function mainContentToTrybeGreen() {
+        const mainContent = document.getElementsByClassName("main-content")[0];
+        mainContent.style.backgroundColor = "rgb(76,164,109)";
+      }
+      mainContentToTrybeGreen();
 
       // 3. Crie uma função que mude a cor do quadrado vermelho para branco.
-      const centerContent = document.getElementsByClassName("center-content")[0];
-      centerContent.style.backgroundColor = 'white'
+      function centerContentToWhithe() {
+        const centerContent =
+          document.getElementsByClassName("center-content")[0];
+        centerContent.style.backgroundColor = "white";
+      }
+
+      centerContentToWhithe();
 
       // 4. Crie uma função que corrija o texto da tag <h1>.
-        document.getElementsByClassName('title')[0].innerText = 'Exercício 5.1 - JavaScripit'
+      function correctTitle() {
+        document.getElementsByClassName("title")[0].innerText =
+          "Exercício 5.1 - JavaScripit";
+      }
+
+      correctTitle();
 
       // 5. Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
+      function paragraphUpperCase() {
+        let paragraph = document.getElementsByTagName("p");
+        for (index in paragraph) {
+          paragraph[index].style.textTransform = "upperCase";
+        }
+      }
+
+      paragraphUpperCase();
 
       // 6. Crie uma função que exiba o conteúdo de todas as tags <p> no console.
     </script>
