@@ -114,31 +114,33 @@
       for (index in listItens) {
         let itens = document.createElement("li");
         itens.innerText = listItens[index];
-        list.appendChild(itens)
+        list.appendChild(itens);
       }
-      section3.appendChild(list)
+      section3.appendChild(list);
 
       // Exercício 1-9
-      for(index = 0; index<3; index+=1){
-        let h3 = document.createElement('h3')
-        main.appendChild(h3)
+      for (index = 0; index < 3; index += 1) {
+        let h3 = document.createElement("h3");
+        main.appendChild(h3);
       }
 
       // Exercício 2-1
-      title.setAttribute('class', 'title')
+      title.setAttribute("class", "title");
 
       // Exercício 2-2
-      let h3Tags = document.getElementsByTagName('h3')
-      for(index=0; index<h3Tags.length; index+=1){
-        h3Tags[index].setAttribute('class','description')
+      let h3Tags = document.getElementsByTagName("h3");
+      for (index = 0; index < h3Tags.length; index += 1) {
+        h3Tags[index].setAttribute("class", "description");
       }
-      
+
       // Exercício 2-3
-      main.removeChild(section2)
+      main.removeChild(section2);
 
       // Exercício 2-4
-      section3.style.marginRight = 'auto'
+      section3.style.marginRight = "auto";
 
+      // Exercício 2-5
+      section.parentElement.style.backgroundColor = "green";
     </script>
   </body>
 </html>
