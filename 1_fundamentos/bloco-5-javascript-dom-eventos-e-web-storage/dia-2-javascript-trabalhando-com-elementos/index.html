@@ -59,12 +59,16 @@
     <script>
       // COLOQUE SEU CÓDIGO AQUI
       // Exercicio 1-1
-      let body = document.getElementsByTagName('body')[0];
-      let title = document.createElement('h1');
-      title.innerText = 'Exercício 5.2 - JavaScript DOM'
-      body.appendChild(title)
+      let body = document.getElementsByTagName("body")[0];
+      let title = document.createElement("h1");
+      title.innerText = "Exercício 5.2 - JavaScript DOM";
+      body.appendChild(title);
 
+      // Exercício 1-2
+      let main = document.createElement('main')
+      main.setAttribute('class', 'main-content')
+      body.appendChild(main)
+      
     </script>
   </body>
 </html>
-
