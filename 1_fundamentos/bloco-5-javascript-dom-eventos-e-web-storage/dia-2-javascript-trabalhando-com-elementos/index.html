@@ -76,25 +76,47 @@
       main.appendChild(section);
 
       // Exercício 1-4
-      let p = document.createElement('p');
-      p.innerText = 'Xableu'
-      section.appendChild(p)
+      let p = document.createElement("p");
+      p.innerText = "Xableu";
+      section.appendChild(p);
 
       // Exercício 1-5
-      let section2 = document.createElement('section')
-      section2.setAttribute('class', 'left-content')
-      main.appendChild(section2)
-      
+      let section2 = document.createElement("section");
+      section2.setAttribute("class", "left-content");
+      main.appendChild(section2);
+
       // Exercício 1-6
-      let section3 = document.createElement('section')
-      section3.setAttribute('class', 'right-content')
-      main.appendChild(section3)
-      
+      let section3 = document.createElement("section");
+      section3.setAttribute("class", "right-content");
+      main.appendChild(section3);
+
       // Exercício 1-7
-      let img = document.createElement('img');
-      img.src = 'https://picsum.photos/200';
-      img.setAttribute('class', 'small-image');
-      section2.appendChild(img)
+      let img = document.createElement("img");
+      img.src = "https://picsum.photos/200";
+      img.setAttribute("class", "small-image");
+      section2.appendChild(img);
+
+      // Exercício 1-8
+      let list = document.createElement("ul");
+
+      let listItens = [
+        "um",
+        "dois",
+        "três",
+        "quatro",
+        "cinco",
+        "seis",
+        "sete",
+        "oito",
+        "nove",
+        "dez",
+      ];
+      for (index in listItens) {
+        let itens = document.createElement("li");
+        itens.innerText = listItens[index];
+        list.appendChild(itens)
+      }
+      section3.appendChild(list)
 
     </script>
   </body>
