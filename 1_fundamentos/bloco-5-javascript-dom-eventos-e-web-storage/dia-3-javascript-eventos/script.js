@@ -141,4 +141,13 @@ function zoomOut() {
     div.appendChild(task)
     
   }
-  createTask('cozinhar')
+  createTask('Projeto')
+
+  function subTaskColor (color){
+    let div = document.querySelector('.my-tasks')
+    let taskColor = document.createElement('div')
+    taskColor.setAttribute('class', 'task')
+    taskColor.style.backgroundColor = color
+    div.appendChild(taskColor)
+  }
+  subTaskColor('lightseagreen')
