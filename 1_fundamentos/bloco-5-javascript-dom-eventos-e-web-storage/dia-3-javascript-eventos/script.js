@@ -156,10 +156,37 @@ function taskSelector() {
   let task = document.querySelector(".task");
   let count = 0;
   task.addEventListener("click", function (event) {
-    count+=1
-    if(count%2 !== 0){
-    event.target.classList.add('selected')}
-    else{event.target.classList.remove('selected')}
+    count += 1;
+    if (count % 2 !== 0) {
+      event.target.classList.add("selected");
+    } else {
+      event.target.classList.remove("selected");
+    }
   });
 }
-taskSelector()
+taskSelector();
+
+function markDay() {
+  let selectedTask = document.getElementsByClassName("task selected");
+  let days = document.getElementsByClassName("day");
+  let taskDiv = document.querySelector(".task");
+  let color = taskDiv.style.backgroundColor;
+  let defaultColor = '#777'
+
+  for (let index = 0; index < days.length; index += 1) {
+    
+    days[index].addEventListener("click", function (event) {
+        let dayColor = event.target.style.color
+        if(selectedTask.length > 0 && dayColor !== color){
+      console.log(color);
+      event.target.style.color = color;
+    }
+    else if(selectedTask.length > 0 && dayColor == color){
+        event.target.style.color = defaultColor
+    }
+})
+  }
+}
+markDay();
+
+
