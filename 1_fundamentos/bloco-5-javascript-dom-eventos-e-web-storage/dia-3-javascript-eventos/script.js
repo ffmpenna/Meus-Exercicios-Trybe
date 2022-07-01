@@ -133,3 +133,12 @@ function zoomOut() {
     }
   }
   zoomOut();
+
+  function createTask (taskName){
+    let div = document.querySelector('.my-tasks')
+    let task = document.createElement('span');
+    task.innerText= taskName
+    div.appendChild(task)
+    
+  }
+  createTask('cozinhar')
