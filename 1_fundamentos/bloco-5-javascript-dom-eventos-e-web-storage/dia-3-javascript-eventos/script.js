@@ -189,4 +189,37 @@ function markDay() {
 }
 markDay();
 
+function addNewCommitment (){
+    let getInput = document.querySelector('#task-input');
+    let addInputButton = document.querySelector('#btn-add');
+    let getTaskList = document.querySelector('.task-list');
 
+    addInputButton.addEventListener('click', function(){
+        if(getInput.value.length > 0){
+            let newLi = document.createElement ('li');
+            newLi.innerText = getInput.value;
+
+            getTaskList.appendChild(newLi);
+            getInput.value = '';
+            getInput.style.border = '1px solid rgb(133,133,133)'
+        } else{
+            alert('ERRO! Campo Vazio')
+            getInput.style.border = '2px red solid'
+        }
+    })
+    getInput.addEventListener('keyup', function(event) {
+        if (event.key === 'Enter' && getInput.value.length > 0) {
+          let newLi = document.createElement('li');
+          newLi.innerText = getInput.value;
+    
+          getTaskList.appendChild(newLi);
+          getInput.value = '';
+          getInput.style.border = '1px solid rgb(133,133,133)';
+        }
+        else if(event.key === 'Enter' && getInput.value.length == 0){
+            alert('ERRO! Campo Vazio')
+            getInput.style.border = '2px red solid'
+        }
+      });
+}
+addNewCommitment();
