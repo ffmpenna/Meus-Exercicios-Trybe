@@ -116,38 +116,50 @@ function zoomIn() {
   let days = document.getElementsByClassName("day");
   for (day of days) {
     day.addEventListener("mouseover", function (event) {
-        event.target.style.fontSize = '1.5em';
-        event.target.style.fontWeight = '600'
+      event.target.style.fontSize = "1.5em";
+      event.target.style.fontWeight = "600";
     });
   }
 }
 zoomIn();
 
 function zoomOut() {
-    let days = document.getElementsByClassName("day");
-    for (day of days) {
-      day.addEventListener('mouseout', function (event) {
-          event.target.style.fontSize = '20px'
-          event.target.style.fontWeight = '400'
-      });
-    }
+  let days = document.getElementsByClassName("day");
+  let day;
+  for (day of days) {
+    day.addEventListener("mouseout", function (event) {
+      event.target.style.fontSize = "20px";
+      event.target.style.fontWeight = "400";
+    });
   }
-  zoomOut();
+}
+zoomOut();
 
-  function createTask (taskName){
-    let div = document.querySelector('.my-tasks')
-    let task = document.createElement('span');
-    task.innerText= taskName
-    div.appendChild(task)
-    
-  }
-  createTask('Projeto')
+function createTask(taskName) {
+  let div = document.querySelector(".my-tasks");
+  let task = document.createElement("span");
+  task.innerText = taskName;
+  div.appendChild(task);
+}
+createTask("Projeto");
 
-  function subTaskColor (color){
-    let div = document.querySelector('.my-tasks')
-    let taskColor = document.createElement('div')
-    taskColor.setAttribute('class', 'task')
-    taskColor.style.backgroundColor = color
-    div.appendChild(taskColor)
-  }
-  subTaskColor('lightseagreen')
+function subTaskColor(color) {
+  let div = document.querySelector(".my-tasks");
+  let taskColor = document.createElement("div");
+  taskColor.setAttribute("class", "task");
+  taskColor.style.backgroundColor = color;
+  div.appendChild(taskColor);
+}
+subTaskColor("lightseagreen");
+
+function taskSelector() {
+  let task = document.querySelector(".task");
+  let count = 0;
+  task.addEventListener("click", function (event) {
+    count+=1
+    if(count%2 !== 0){
+    event.target.classList.add('selected')}
+    else{event.target.classList.remove('selected')}
+  });
+}
+taskSelector()
