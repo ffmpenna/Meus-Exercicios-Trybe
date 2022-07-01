@@ -94,21 +94,42 @@ function showFridays() {
   let fridayButton = document.getElementById("btn-friday");
   let fridays = document.getElementsByClassName("friday");
   let count = 0;
-  let fridayArray = [4,11,18,25]
+  let defaultFriday = [4, 11, 18, 25];
 
   fridayButton.addEventListener("click", function () {
     count += 1;
 
     if (count % 2 == 0) {
       for (index = 0; index < fridays.length; index += 1) {
-        fridays[index].innerText = fridayArray[index];
+        fridays[index].innerText = defaultFriday[index];
       }
     } else {
       for (index = 0; index < fridays.length; index += 1) {
-        fridays[index].innerText = "Sextou!!!";
+        fridays[index].innerText = "Sextou!";
       }
     }
   });
 }
 showFridays();
 
+function zoomIn() {
+  let days = document.getElementsByClassName("day");
+  for (day of days) {
+    day.addEventListener("mouseover", function (event) {
+        event.target.style.fontSize = '1.5em';
+        event.target.style.fontWeight = '600'
+    });
+  }
+}
+zoomIn();
+
+function zoomOut() {
+    let days = document.getElementsByClassName("day");
+    for (day of days) {
+      day.addEventListener('mouseout', function (event) {
+          event.target.style.fontSize = '20px'
+          event.target.style.fontWeight = '400'
+      });
+    }
+  }
+  zoomOut();
